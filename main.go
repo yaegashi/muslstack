@@ -144,12 +144,16 @@ func main() {
 		os.Exit(1)
 	}
 
+	exitCode := 0
 	for _, path := range flag.Args() {
 		newSize, err := patch(path, setStackSize, stackSize)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "%s: %s\n", path, err)
+			exitCode = 1
 			continue
 		}
 		fmt.Printf("%s: stackSize: 0x%x\n", path, newSize)
 	}
+
+	os.Exit(exitCode)
 }
