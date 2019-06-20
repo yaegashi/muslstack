@@ -87,8 +87,9 @@ $ muslstack main
 main: stackSize: 0x800000
 ```
 
-You can find more test cases in [tests](./tests) folder.
+You can find more test cases in [tests folder](./tests).
 
-## License
+## Resources
 
-MIT
+- [golang binary hacks](https://www.slideshare.net/yaegashi/golang-binary-hacks-150386886):
+Japanese presentation for [golang.tokyo #25](https://golangtokyo.connpass.com/event/133581/)
